@@ -102,4 +102,4 @@ source $ZSH/oh-my-zsh.sh
 EDITOR="~/workspace/squashfs-root/usr/bin/nvim"
 VISUAL="~/workspace/squashfs-root/usr/bin/nvim"
 alias vim="~/workspace/squashfs-root/usr/bin/nvim"
-
+alias nvim="~/workspace/squashfs-root/usr/bin/nvim"
