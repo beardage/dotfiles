@@ -99,4 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+EDITOR="~/workspace/squashfs-root/usr/bin/nvim"
+VISUAL="~/workspace/squashfs-root/usr/bin/nvim"
+alias vim="~/workspace/squashfs-root/usr/bin/nvim"
 
