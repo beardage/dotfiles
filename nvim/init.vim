@@ -25,8 +25,12 @@ Plug 'preservim/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
