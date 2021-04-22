@@ -1,5 +1,3 @@
-packadd! dracula
-color dracula
 syntax enable
 
 hi Normal guibg=NONE ctermbg=NONE
@@ -18,6 +16,7 @@ set hlsearch " highlight matches
 
 " plugins
 call plug#begin()
+Plug 'dracula/vim',{'as':'dracula'}
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -31,6 +30,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
+color dracula
 let g:deoplete#enable_at_startup = 1
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
