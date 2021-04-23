@@ -1,6 +1,5 @@
 syntax enable
 
-hi Normal guibg=NONE ctermbg=NONE
 
 set omnifunc=syntaxcomplete#Complete
 set smartindent
@@ -31,6 +30,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 color dracula
+hi Normal guibg=NONE ctermbg=NONE
 let g:deoplete#enable_at_startup = 1
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
