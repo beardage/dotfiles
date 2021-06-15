@@ -34,6 +34,14 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:deoplete#enable_at_startup = 1
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+let mapleader = "\<space>"
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
