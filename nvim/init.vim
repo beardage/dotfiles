@@ -12,6 +12,7 @@ set cursorline  " highlight current line
 set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
+set clipboard=unnamedplus " use system clipboard
 
 " plugins
 call plug#begin()
