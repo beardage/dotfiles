@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:~/workspace/tree-sitter
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:/opt/PhpStorm/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kyle/.oh-my-zsh"
@@ -8,7 +8,8 @@ export ZSH="/home/kyle/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -99,10 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-EDITOR="~/workspace/squashfs-root/usr/bin/nvim"
-VISUAL="~/workspace/squashfs-root/usr/bin/nvim"
-alias vim="~/workspace/squashfs-root/usr/bin/nvim"
-alias nvim="~/workspace/squashfs-root/usr/bin/nvim"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
