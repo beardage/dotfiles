@@ -1,20 +1,35 @@
-syntax enable
 
+"--------------------------------------------------------------------------
+" General settings
+"--------------------------------------------------------------------------
+syntax enable
 
 set omnifunc=syntaxcomplete#Complete
 set smartindent
+set expandtab " insert spaces when tab is pressed
 set shiftwidth=4 " number of spaces when shift indenting
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing
-set expandtab " tab to spaces
-set number relativenumber" show hybrid line numbers
-set cursorline  " highlight current line
+set hidden  " better buffer handling
+set signcolumn=yes " always show signcolumn
+set spell " do spellchecking
+set title " show title in statusline
+set list " show whitespace as chars
+set listchars=tab:▸\ ,trail:· " show tabs as arrow right and trailing spaces as dots
+set mouse=a " enable copy/paste of text selected using the mouse
+set scrolloff=8 " keep cursor in the middle of the screen as much as reasonable
+set sidescrolloff=8 " keep cursor in the middle of the screen as much as reasonable
+set splitright " when a pane is split, go right by default
+set number relativenumber " show hybrid line numbers
+set cursorline " highlight current line
 set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set clipboard=unnamedplus " use system clipboard
 
-" plugins
+"--------------------------------------------------------------------------
+" Plugins
+"--------------------------------------------------------------------------
 call plug#begin()
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'nvim-lua/popup.nvim'
@@ -34,6 +49,10 @@ call plug#end()
 
 color dracula
 hi Normal guibg=NONE ctermbg=NONE
+
+"--------------------------------------------------------------------------
+" Keymaps
+"--------------------------------------------------------------------------
 let mapleader = "\<space>"
 " Prettier Settings
 let g:prettier#quickfix_enabled = 0
@@ -45,4 +64,5 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
