@@ -54,10 +54,7 @@ source ~/.config/nvim/plugins/editorconfig.vim
 call plug#end()
 doautocmd User PlugLoaded
 
-" Prettier Settings
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat_require_pragma = 0
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+hi Normal guibg=NONE ctermbg=NONE
 
 "--------------------------------------------------------------------------
 " Keymaps
@@ -80,6 +77,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 vnoremap y myy`y
 vnoremap Y myY`y
 
+" Make Y behave like the other capitals
+nnoremap Y y$
 " Reselect visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
