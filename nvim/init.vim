@@ -50,14 +50,20 @@ call plug#end()
 color dracula
 hi Normal guibg=NONE ctermbg=NONE
 
-"--------------------------------------------------------------------------
-" Keymaps
-"--------------------------------------------------------------------------
-let mapleader = "\<space>"
 " Prettier Settings
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat_require_pragma = 0
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+
+"--------------------------------------------------------------------------
+" Keymaps
+"--------------------------------------------------------------------------
+let mapleader = "\<space>"
+
+" easy access to vim settings
+nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
+nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
+nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -65,4 +71,11 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" Maintain the cursor position when yanking a visual selection
+" http://ddrscott.github.io/blog/2016/yank-without-jank/
+vnoremap y myy`y
+vnoremap Y myY`y
 
+" Reselect visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
