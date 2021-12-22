@@ -100,6 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias copy="xclip -selection clipboard"
+alias paste="xclip -o -selection clipboard"
+alias dcu="sudo docker-compose up -d"
+alias ka="/etc/init.d/apache2.stop"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
