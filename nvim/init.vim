@@ -30,25 +30,29 @@ set clipboard=unnamedplus " use system clipboard
 "--------------------------------------------------------------------------
 " Plugins
 "--------------------------------------------------------------------------
-call plug#begin()
-Plug 'dracula/vim',{'as':'dracula'}
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'codechips/coc-svelte', {'do': 'npm install'}
-Plug 'evanleck/vim-svelte'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-Plug 'tpope/vim-fugitive'
-call plug#end()
+" Automatically install vim-plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-color dracula
-hi Normal guibg=NONE ctermbg=NONE
+call plug#begin(data_dir . '/plugins')
+
+source ~/.config/nvim/plugins/dracula.vim
+source ~/.config/nvim/plugins/commentary.vim
+source ~/.config/nvim/plugins/coc.vim
+source ~/.config/nvim/plugins/telescope.vim
+source ~/.config/nvim/plugins/nerdtree.vim
+source ~/.config/nvim/plugins/smoothie.vim
+source ~/.config/nvim/plugins/airline.vim
+source ~/.config/nvim/plugins/prettier.vim
+source ~/.config/nvim/plugins/fugitive.vim
+source ~/.config/nvim/plugins/floatterm.vim
+source ~/.config/nvim/plugins/editorconfig.vim
+
+call plug#end()
+doautocmd User PlugLoaded
 
 " Prettier Settings
 let g:prettier#quickfix_enabled = 0
