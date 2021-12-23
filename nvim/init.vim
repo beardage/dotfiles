@@ -50,6 +50,7 @@ source ~/.config/nvim/plugins/prettier.vim
 source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/floatterm.vim
 source ~/.config/nvim/plugins/editorconfig.vim
+source ~/.config/nvim/plugins/vdebug.vim
 
 call plug#end()
 doautocmd User PlugLoaded
