@@ -35,5 +35,6 @@
     "intelephense.environment.phpVersion": "8",
     "tailwindCSS.validate": true,
     "tailwindCSS.emmetCompletions": true,
-    "prettier.requireConfig": true
+    "prettier.requireConfig": true,
+    "svelte.enable-ts-plugin": true
 }
