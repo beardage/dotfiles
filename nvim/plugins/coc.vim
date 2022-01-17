@@ -16,6 +16,7 @@ let g:coc_global_extensions = [
     \ 'coc-sh',
     \ 'coc-snippets',
     \ 'coc-sql',
+    \ 'coc-svelte',
     \ 'coc-svg',
     \ 'coc-tsserver',
     \ '@yaegassy/coc-volar',
