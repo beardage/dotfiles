@@ -25,7 +25,7 @@ set cursorline " highlight current line
 set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
-set clipboard=unnamedplus " use system clipboard
+set clipboard^=unnamed,unnamedplus " use system clipboard
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -49,7 +49,7 @@ source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/prettier.vim
 source ~/.config/nvim/plugins/polyglot.vim
 source ~/.config/nvim/plugins/fugitive.vim
-source ~/.config/nvim/plugins/floatterm.vim
+source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/editorconfig.vim
 source ~/.config/nvim/plugins/vdebug.vim
 
@@ -73,6 +73,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Open floaterm (won't work in plug partial for some reason)
+nnoremap <leader>t <cmd>FloatermToggle<cr>
 
 " NERDTree
 nnoremap <expr> <leader>n g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
