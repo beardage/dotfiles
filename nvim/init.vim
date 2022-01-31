@@ -52,6 +52,7 @@ source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/editorconfig.vim
 source ~/.config/nvim/plugins/vdebug.vim
+source ~/.config/nvim/plugins/sleuth.vim
 
 call plug#end()
 doautocmd User PlugLoaded
