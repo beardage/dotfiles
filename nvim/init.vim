@@ -46,7 +46,7 @@ source ~/.config/nvim/plugins/telescope.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/smoothie.vim
 source ~/.config/nvim/plugins/airline.vim
-source ~/.config/nvim/plugins/prettier.vim
+"source ~/.config/nvim/plugins/prettier.vim
 source ~/.config/nvim/plugins/polyglot.vim
 source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/floaterm.vim
