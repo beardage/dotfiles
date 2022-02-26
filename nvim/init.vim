@@ -41,7 +41,7 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/commentary.vim
-source ~/.config/nvim/plugins/coc.vim
+"source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/telescope.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/smoothie.vim
@@ -53,12 +53,22 @@ source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/editorconfig.vim
 source ~/.config/nvim/plugins/vdebug.vim
 source ~/.config/nvim/plugins/sleuth.vim
+source ~/.config/nvim/plugins/treesitter.vim
 
 call plug#end()
 doautocmd User PlugLoaded
 
 hi Normal guibg=NONE ctermbg=NONE
 
+" Setup treesitter ( must be done after plug#end ) 
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+  },
+}
+EOF
 "--------------------------------------------------------------------------
 " Keymaps
 "--------------------------------------------------------------------------
