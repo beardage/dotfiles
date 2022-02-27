@@ -54,21 +54,18 @@ source ~/.config/nvim/plugins/editorconfig.vim
 source ~/.config/nvim/plugins/vdebug.vim
 source ~/.config/nvim/plugins/sleuth.vim
 source ~/.config/nvim/plugins/treesitter.vim
+source ~/.config/nvim/plugins/lsp.vim
+"source ~/.config/nvim/plugins/completion.vim
 
 call plug#end()
 doautocmd User PlugLoaded
 
 hi Normal guibg=NONE ctermbg=NONE
 
-" Setup treesitter ( must be done after plug#end ) 
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  highlight = {
-    enable = true,
-  },
-}
-EOF
+"lua config
+source ~/.config/nvim/lua/treesitter.vim
+source ~/.config/nvim/lua/lsp.vim
+
 "--------------------------------------------------------------------------
 " Keymaps
 "--------------------------------------------------------------------------
