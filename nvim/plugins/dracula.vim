@@ -1,4 +1,5 @@
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Mofiqul/dracula.nvim'
 
 augroup DraculaOverrides
     autocmd!

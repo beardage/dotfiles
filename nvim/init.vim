@@ -4,7 +4,7 @@
 "--------------------------------------------------------------------------
 syntax enable
 
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 set smartindent
 set expandtab " insert spaces when tab is pressed
 set shiftwidth=4 " number of spaces when shift indenting
@@ -12,7 +12,6 @@ set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing
 set hidden  " better buffer handling
 set signcolumn=yes " always show signcolumn
-set spell " do spellchecking
 set title " show title in statusline
 set list " show whitespace as chars
 set listchars=tab:▸\ ,trail:· " show tabs as arrow right and trailing spaces as dots
@@ -41,13 +40,11 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/commentary.vim
-"source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/telescope.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/smoothie.vim
 source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/prettier.vim
-source ~/.config/nvim/plugins/polyglot.vim
 source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/editorconfig.vim
