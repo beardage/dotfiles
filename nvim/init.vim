@@ -25,6 +25,7 @@ set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set clipboard^=unnamed,unnamedplus " use system clipboard
+set termguicolors
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -56,7 +57,6 @@ source ~/.config/nvim/plugins/completion.vim
 
 call plug#end()
 doautocmd User PlugLoaded
-
 hi Normal guibg=NONE ctermbg=NONE
 
 "lua configs
