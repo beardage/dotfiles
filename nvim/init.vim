@@ -54,6 +54,7 @@ source ~/.config/nvim/plugins/sleuth.vim
 source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
+source ~/.config/nvim/plugins/colorizer.vim
 
 call plug#end()
 doautocmd User PlugLoaded
@@ -63,6 +64,7 @@ hi Normal guibg=NONE ctermbg=NONE
 source ~/.config/nvim/lua/treesitter.vim
 source ~/.config/nvim/lua/lsp.vim
 source ~/.config/nvim/lua/completion.vim
+source ~/.config/nvim/lua/colorizer.vim
 
 "--------------------------------------------------------------------------
 " Keymaps
