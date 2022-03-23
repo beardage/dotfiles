@@ -100,3 +100,9 @@ nnoremap Y y$
 " Reselect visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
+
+" lsp keybinds (prior to switching to lua based config)
+noremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
+noremap gd <cmd>lua vim.lsp.buf.definition()<CR>
+noremap gr <cmd>lua vim.lsp.buf.references()<CR>
+
