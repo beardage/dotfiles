@@ -1,2 +1,2 @@
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TsUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
