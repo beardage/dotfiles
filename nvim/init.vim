@@ -39,9 +39,7 @@ endif
 
 call plug#begin(data_dir . '/plugins')
 
-"source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/orlock.vim
-"source ~/.config/nvim/plugins/deep-space.vim
 source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/telescope.vim
 source ~/.config/nvim/plugins/nerdtree.vim
