@@ -42,7 +42,6 @@ call plug#begin(data_dir . '/plugins')
 source ~/.config/nvim/plugins/orlock.vim
 source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/telescope.vim
-source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/smoothie.vim
 source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/prettier.vim
@@ -55,6 +54,7 @@ source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/colorizer.vim
+source ~/.config/nvim/plugins/tree.vim
 
 call plug#end()
 doautocmd User PlugLoaded
@@ -65,6 +65,7 @@ source ~/.config/nvim/lua/treesitter.vim
 source ~/.config/nvim/lua/lsp.vim
 source ~/.config/nvim/lua/completion.vim
 source ~/.config/nvim/lua/colorizer.vim
+source ~/.config/nvim/lua/tree.vim
 
 "--------------------------------------------------------------------------
 " Keymaps
@@ -84,10 +85,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Open floaterm (won't work in plug partial for some reason)
 nnoremap <leader>t <cmd>FloatermToggle<cr>
-
-" NERDTree
-nnoremap <expr> <leader>n g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
-nmap <leader>N :NERDTreeFind<CR>
 
 " Maintain the cursor position when yanking a visual selection
 " http://ddrscott.github.io/blog/2016/yank-without-jank/
