@@ -50,6 +50,7 @@ let g:nvim_tree_icons = {
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=NONE
+highlight NvimTreeNormal guibg=NONE
 
 nnoremap <leader>n :NvimTreeToggle<CR>
 nnoremap <leader>nr :NvimTreeRefresh<CR>
