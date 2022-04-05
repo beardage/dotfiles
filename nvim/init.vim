@@ -74,7 +74,6 @@ let mapleader = "\<space>"
 
 " easy access to vim settings
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
-nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 " Find files using Telescope command-line sugar.
