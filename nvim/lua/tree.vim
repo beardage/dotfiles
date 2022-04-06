@@ -66,9 +66,5 @@ nnoremap <leader>tff :vimTreeFindFile<CR>
 
 
 lua <<EOF
-require'nvim-tree'.setup {
-    git = {
-        enable = false
-        }
-}
+require'nvim-tree'.setup {}
 EOF

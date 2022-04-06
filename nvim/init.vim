@@ -82,6 +82,11 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" nvim-tree
+nnoremap <leader>n :NvimTreeToggle<CR>
+nnoremap <leader>nr :NvimTreeRefresh<CR>
+nnoremap <leader>tff :NvimTreeFindFile<CR>
+
 " Open floaterm (won't work in plug partial for some reason)
 nnoremap <leader>t <cmd>FloatermToggle<cr>
 
