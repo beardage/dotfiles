@@ -1,3 +1,5 @@
 lua << END
-require('lualine').setup()
+require('lualine').setup {
+  extensions = {'nvim-tree', 'fugitive'}
+}
 END
