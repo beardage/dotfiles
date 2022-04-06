@@ -43,7 +43,7 @@ source ~/.config/nvim/plugins/orlock.vim
 source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/telescope.vim
 source ~/.config/nvim/plugins/smoothie.vim
-source ~/.config/nvim/plugins/airline.vim
+source ~/.config/nvim/plugins/lualine.vim
 source ~/.config/nvim/plugins/prettier.vim
 source ~/.config/nvim/plugins/fugitive.vim
 source ~/.config/nvim/plugins/floaterm.vim
@@ -66,6 +66,7 @@ source ~/.config/nvim/lua/lsp.vim
 source ~/.config/nvim/lua/completion.vim
 source ~/.config/nvim/lua/colorizer.vim
 source ~/.config/nvim/lua/tree.vim
+source ~/.config/nvim/lua/lualine.vim
 
 "--------------------------------------------------------------------------
 " Keymaps
