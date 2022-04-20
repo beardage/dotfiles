@@ -55,6 +55,7 @@ source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/colorizer.vim
 source ~/.config/nvim/plugins/tree.vim
+source ~/.config/nvim/plugins/autosession.vim
 
 call plug#end()
 doautocmd User PlugLoaded
@@ -67,6 +68,7 @@ source ~/.config/nvim/lua/completion.vim
 source ~/.config/nvim/lua/colorizer.vim
 source ~/.config/nvim/lua/tree.vim
 source ~/.config/nvim/lua/lualine.vim
+source ~/.config/nvim/lua/autosession.vim
 
 "--------------------------------------------------------------------------
 " Keymaps
