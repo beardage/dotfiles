@@ -3,7 +3,7 @@
 " General settings
 "--------------------------------------------------------------------------
 syntax enable
-
+" TODO do this shit 
 "set omnifunc=syntaxcomplete#Complete
 set smartindent
 set expandtab " insert spaces when tab is pressed
@@ -56,6 +56,7 @@ source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/colorizer.vim
 source ~/.config/nvim/plugins/tree.vim
 source ~/.config/nvim/plugins/autosession.vim
+source ~/.config/nvim/plugins/todo-comments.vim
 
 call plug#end()
 doautocmd User PlugLoaded
@@ -69,6 +70,7 @@ source ~/.config/nvim/lua/colorizer.vim
 source ~/.config/nvim/lua/tree.vim
 source ~/.config/nvim/lua/lualine.vim
 source ~/.config/nvim/lua/autosession.vim
+source ~/.config/nvim/lua/todo-comments.vim
 
 "--------------------------------------------------------------------------
 " Keymaps
