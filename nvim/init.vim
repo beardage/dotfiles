@@ -57,6 +57,7 @@ source ~/.config/nvim/plugins/colorizer.vim
 source ~/.config/nvim/plugins/tree.vim
 source ~/.config/nvim/plugins/autosession.vim
 source ~/.config/nvim/plugins/todo-comments.vim
+source ~/.config/nvim/plugins/smart-splits.vim
 
 call plug#end()
 doautocmd User PlugLoaded
@@ -71,6 +72,7 @@ source ~/.config/nvim/lua/tree.vim
 source ~/.config/nvim/lua/lualine.vim
 source ~/.config/nvim/lua/autosession.vim
 source ~/.config/nvim/lua/todo-comments.vim
+source ~/.config/nvim/lua/smart-splits.vim
 
 "--------------------------------------------------------------------------
 " Keymaps
