@@ -1,8 +1,18 @@
 lua <<EOF
 -- Setup nvim-cmp.
   local cmp = require'cmp'
-
+  local lspkind = require 'lspkind'
   cmp.setup({
+    formatting = { 
+      format = function(entry, vim_item)
+        vim_item.kind = lspkind.presets.default[vim_item.kind]
+        vim_item.menu = ({
+            nvim_lsp = "[LSP]",
+            buffer = "[Buffer]",
+          })[entry.source.name]
+        return vim_item
+      end
+    },
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
