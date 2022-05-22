@@ -24,6 +24,7 @@ set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set clipboard^=unnamed,unnamedplus " use system clipboard
+set laststatus=3 "single status line (nvim 0.7+ only)
 set termguicolors
 
 "--------------------------------------------------------------------------
