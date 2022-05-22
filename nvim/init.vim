@@ -25,6 +25,7 @@ set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set clipboard^=unnamed,unnamedplus " use system clipboard
 set laststatus=3 "single status line (nvim 0.7+ only)
+set completeopt=menu,menuone,noselect
 set termguicolors
 
 "--------------------------------------------------------------------------
@@ -67,7 +68,6 @@ hi Normal guibg=NONE ctermbg=NONE
 "lua configs
 source ~/.config/nvim/lua/treesitter.vim
 source ~/.config/nvim/lua/lsp.vim
-source ~/.config/nvim/lua/completion.vim
 source ~/.config/nvim/lua/colorizer.vim
 source ~/.config/nvim/lua/tree.vim
 source ~/.config/nvim/lua/lualine.vim
@@ -75,7 +75,8 @@ source ~/.config/nvim/lua/autosession.vim
 source ~/.config/nvim/lua/todo-comments.vim
 source ~/.config/nvim/lua/smart-splits.vim
 source ~/.config/nvim/lua/lspkind.vim
-
+source ~/.config/nvim/lua/completion.vim
+source ~/.config/nvim/lua/luasnip.vim
 "--------------------------------------------------------------------------
 " Keymaps
 "--------------------------------------------------------------------------
