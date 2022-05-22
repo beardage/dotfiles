@@ -15,6 +15,7 @@ let g:nvim_tree_show_icons = {
     \ 'folder_arrows': 0,
     \ }
 "If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"
 "1 by default, notice that if 'files' is 1, it will only display
 "if nvim-web-devicons is installed and on your runtimepath.
 "if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
@@ -113,8 +114,8 @@ require'nvim-tree'.setup {
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
-    update_cwd = false,
+    enable = true,
+    update_cwd = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {},
