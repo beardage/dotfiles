@@ -3,7 +3,6 @@
 " General settings
 "--------------------------------------------------------------------------
 syntax enable
-" TODO do this shit 
 "set omnifunc=syntaxcomplete#Complete
 set smartindent
 set expandtab " insert spaces when tab is pressed

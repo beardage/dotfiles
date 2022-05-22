@@ -83,7 +83,7 @@ require'nvim-tree'.setup {
     width = 30,
     height = 30,
     hide_root_folder = false,
-    side = "left",
+    side = "right",
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,
@@ -114,9 +114,9 @@ require'nvim-tree'.setup {
     auto_open = true,
   },
   update_focused_file = {
-    enable = true,
-    update_cwd = true,
-    ignore_list = {},
+    enable = false,
+    update_cwd = false,
+    ignore_list = { "COMMIT_EDITMSG" },
   },
   ignore_ft_on_setup = {},
   system_open = {
