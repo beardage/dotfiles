@@ -1,1 +1,3 @@
-lua require('auto-session').setup()
+lua <<EOF 
+require('auto-session').setup()
+EOF

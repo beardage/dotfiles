@@ -61,6 +61,7 @@ source ~/.config/nvim/plugins/todo-comments.vim
 source ~/.config/nvim/plugins/smart-splits.vim
 source ~/.config/nvim/plugins/lspkind.vim
 source ~/.config/nvim/plugins/guess-indent.vim
+source ~/.config/nvim/plugins/vim-visual-multi.vim
 
 call plug#end()
 doautocmd User PlugLoaded
