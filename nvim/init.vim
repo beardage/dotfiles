@@ -60,6 +60,7 @@ source ~/.config/nvim/plugins/autosession.vim
 source ~/.config/nvim/plugins/todo-comments.vim
 source ~/.config/nvim/plugins/smart-splits.vim
 source ~/.config/nvim/plugins/lspkind.vim
+source ~/.config/nvim/plugins/guess-indent.vim
 
 call plug#end()
 doautocmd User PlugLoaded
@@ -77,6 +78,8 @@ source ~/.config/nvim/lua/smart-splits.vim
 source ~/.config/nvim/lua/lspkind.vim
 source ~/.config/nvim/lua/completion.vim
 source ~/.config/nvim/lua/luasnip.vim
+source ~/.config/nvim/lua/guess-indent.vim
+
 "--------------------------------------------------------------------------
 " Keymaps
 "--------------------------------------------------------------------------
