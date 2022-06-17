@@ -27,7 +27,8 @@ set clipboard^=unnamed,unnamedplus " use system clipboard
 set laststatus=3 "single status line (nvim 0.7+ only)
 set completeopt=menu,menuone,noselect
 set termguicolors
-set winbar=%=%m\ %f 
+set winbar=%=%m\ %f "add winbar to top of each split
+set cmdheight=0 "hide command bar until in use
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -82,6 +83,8 @@ source ~/.config/nvim/lua/completion.vim
 source ~/.config/nvim/lua/luasnip.vim
 source ~/.config/nvim/lua/guess-indent.vim
 
+
+
 "--------------------------------------------------------------------------
 " Keymaps
 "--------------------------------------------------------------------------
@@ -122,3 +125,8 @@ noremap <leader>e <cmd>lua vim.diagnostic.open_float()<CR>
 noremap gd <cmd>lua vim.lsp.buf.definition()<CR>
 noremap gr <cmd>lua vim.lsp.buf.references()<CR>
 
+augroup kitty_mp
+    autocmd!
+    au VimLeave * :silent !kitty @ set-spacing padding=5 margin=5
+    au VimEnter * :silent !kitty @ set-spacing padding=0 margin=0
+augroup END
