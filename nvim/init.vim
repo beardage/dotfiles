@@ -10,7 +10,7 @@ set shiftwidth=4 " number of spaces when shift indenting
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing
 set hidden  " better buffer handling
-set signcolumn=yes " always show signcolumn
+set signcolumn=number " show sign in numbercolumn
 set title " show title in statusline
 set list " show whitespace as chars
 set listchars=tab:▸\ ,trail:· " show tabs as arrow right and trailing spaces as dots
@@ -24,9 +24,9 @@ set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set clipboard^=unnamed,unnamedplus " use system clipboard
-set laststatus=3 "single status line (nvim 0.7+ only)
 set completeopt=menu,menuone,noselect
 set termguicolors
+set laststatus=3 "single status line (nvim 0.7+ only)
 set winbar=%=%m\ %f "add winbar to top of each split
 set cmdheight=0 "hide command bar until in use
 
