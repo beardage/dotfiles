@@ -27,6 +27,7 @@ set clipboard^=unnamed,unnamedplus " use system clipboard
 set laststatus=3 "single status line (nvim 0.7+ only)
 set completeopt=menu,menuone,noselect
 set termguicolors
+set winbar=%=%m\ %f 
 
 "--------------------------------------------------------------------------
 " Plugins
