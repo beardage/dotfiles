@@ -28,7 +28,7 @@ set completeopt=menu,menuone,noselect
 set termguicolors
 set laststatus=3 "single status line (nvim 0.7+ only)
 set winbar=%=%m\ %f "add winbar to top of each split
-set cmdheight=0 "hide command bar until in use
+"set cmdheight=0 "hide command bar until in use (commented until bugs fixed)
 
 "--------------------------------------------------------------------------
 " Plugins
