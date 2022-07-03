@@ -1,6 +1,7 @@
 lua <<EOF
 local lsp_installer = require("nvim-lsp-installer")
-
+local lspconfig = require('lspconfig')
+local configs = require('lspconfig/configs')
 -- Register a handler that will be called for each installed server when it's ready (i.e. when installation is finished
 -- or if the server is already installed).
 lsp_installer.on_server_ready(function(server)
@@ -19,4 +20,11 @@ lsp_installer.on_server_ready(function(server)
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
     server:setup(opts)
 end)
+
+lspconfig.emmet_ls.setup({
+    -- on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+})
+
 EOF
