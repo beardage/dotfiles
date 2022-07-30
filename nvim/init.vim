@@ -93,7 +93,7 @@ let mapleader = "\<space>"
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
-" Find files using Telescope command-line sugar.
+" telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fgf <cmd>Telescope live_grep hidden=true<cr>
