@@ -1,3 +1,3 @@
-lua << EOF
-  require("todo-comments").setup {}
+lua <<EOF
+  require"todo-comments".setup {}
 EOF
