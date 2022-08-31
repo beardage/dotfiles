@@ -11,8 +11,8 @@ let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 }
 let g:nvim_tree_show_icons = {
     \ 'git': 1,
     \ 'folders': 0,
-    \ 'files': 0,
-    \ 'folder_arrows': 0,
+    \ 'files': 1,
+    \ 'folder_arrows': 1,
     \ }
 "If 0, do not show the icons for one of 'git' 'folder' and 'files'
 "
@@ -54,7 +54,7 @@ highlight NvimTreeNormal guibg=NONE
 
 nnoremap <leader>n :NvimTreeToggle<CR>
 nnoremap <leader>nr :NvimTreeRefresh<CR>
-nnoremap <leader>tff :vimTreeFindFile<CR>
+nnoremap <leader>tff :NvimTreeFindFile<CR>
 " More available functions:
 " NvimTreeOpen
 " NvimTreeClose
