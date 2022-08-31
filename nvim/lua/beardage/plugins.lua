@@ -24,8 +24,31 @@ use('tpope/vim-commentary')
 use('tpope/vim-sleuth') -- indent autodetection with editorconfig support
 
 use({
-    'mrjones2014/smart-splits.nvim'
+    'mrjones2014/smart-splits.nvim',
     config = function()
         require('beardage.plugins.smart-splits')
-    end
+    end,
+})
+
+use({
+    'beardage/orlock.nvim',
+    config = function()
+        vim.cmd('colorscheme orlock')
+    end,
+})
+
+use({
+  'nvim-lualine/lualine.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('beardage.plugins.lualine')
+  end,
+})
+
+use({
+  'kyazdani42/nvim-tree.lua',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('beardage.plugins.nvim-tree')
+  end,
 })
