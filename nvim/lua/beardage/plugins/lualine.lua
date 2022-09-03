@@ -1,7 +1,7 @@
 local separator = { '"▏"', color = 'StatusLineNonText' }
 
 require('lualine').setup({
-  extensions = {'nvim-tree', 'fugitive'}
+  extensions = {'nvim-tree', 'fugitive'},
   options = {
     section_separators = '',
     component_separators = '',

@@ -20,8 +20,15 @@ require('packer').init({
 local use = require('packer').use
 
 use('wbthomason/packer.nvim') -- Let packer manage itself
+
 use('tpope/vim-commentary')
 use('tpope/vim-sleuth') -- indent autodetection with editorconfig support
+use({
+  'tpope/vim-fugitive',
+  requires = 'tpope/vim-rhubarb',
+  cmd = 'G',
+})
+
 
 use({
     'mrjones2014/smart-splits.nvim',
