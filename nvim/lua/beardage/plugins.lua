@@ -29,7 +29,6 @@ use({
   cmd = 'G',
 })
 
-
 use({
     'mrjones2014/smart-splits.nvim',
     config = function()
@@ -57,5 +56,31 @@ use({
   requires = 'kyazdani42/nvim-web-devicons',
   config = function()
     require('beardage.plugins.nvim-tree')
+  end,
+})
+
+use({
+  'nvim-telescope/telescope.nvim',
+  requires = {
+    { 'nvim-lua/plenary.nvim' },
+    { 'kyazdani42/nvim-web-devicons' },
+    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+    { 'nvim-telescope/telescope-live-grep-args.nvim' },
+  },
+  config = function()
+    require('beardage.plugins.telescope')
+  end,
+})
+
+use({
+  'nvim-treesitter/nvim-treesitter',
+  run = ':TSUpdate',
+  requires = {
+    'nvim-treesitter/playground',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    'JoosepAlviste/nvim-ts-context-commentstring',
+  },
+  config = function()
+    require('beardage.plugins.treesitter')
   end,
 })
