@@ -84,3 +84,33 @@ use({
     require('beardage.plugins.treesitter')
   end,
 })
+
+use({
+  'hrsh7th/nvim-cmp',
+  requires = {
+    "neovim/nvim-lspconfig",
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'onsails/lspkind.nvim',
+    'rafamadriz/friendly-snippets',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip'
+  },
+  config = function()
+    require('beardage.plugins.cmp')
+  end,
+})
+
+use({
+    "neovim/nvim-lspconfig",
+    requires = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "hrsh7th/cmp-nvim-lsp"
+    },
+    config = function()
+      require('beardage.plugins.lspconfig')
+    end,
+})
