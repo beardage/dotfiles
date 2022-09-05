@@ -1,5 +1,6 @@
   local cmp = require'cmp'
   local lspkind = require'lspkind'
+  lspkind.init({mode='symbol_text', preset = 'codicons'})
   require("luasnip.loaders.from_vscode").lazy_load()
   cmp.setup({
     formatting = { 

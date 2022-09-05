@@ -118,6 +118,13 @@ use({
 use('psliwka/vim-smoothie')
 
 use({
+  'nmac427/guess-indent.nvim',
+  config = function ()
+    require('guess-indent').setup {}
+  end,
+})
+
+use({
   'folke/todo-comments.nvim',
   requires = {
     'nvim-lua/plenary.nvim'
