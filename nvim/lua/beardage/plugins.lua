@@ -114,3 +114,4 @@ use({
       require('beardage.plugins.lspconfig')
     end,
 })
+
