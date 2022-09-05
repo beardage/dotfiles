@@ -160,3 +160,5 @@ use({
 		require("beardage.plugins.null-ls")
 	end,
 })
+
+use("mg979/vim-visual-multi")
