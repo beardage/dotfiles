@@ -13,4 +13,3 @@
 
 - shell:
     - ["git submodule update --init --recursive", Installing submodules]
-    - ["vim +PlugUpdate +PlugClean!", Installing and updating plugins]

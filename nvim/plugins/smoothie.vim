@@ -1,1 +1,0 @@
-Plug 'psliwka/vim-smoothie'
