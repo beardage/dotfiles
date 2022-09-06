@@ -162,3 +162,10 @@ use({
 })
 
 use("mg979/vim-visual-multi")
+
+use({
+	"numToStr/FTerm.nvim",
+	config = function()
+		require("beardage.plugins.fterm")
+	end,
+})
