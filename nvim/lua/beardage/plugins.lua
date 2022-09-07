@@ -169,3 +169,5 @@ use({
 		require("beardage.plugins.fterm")
 	end,
 })
+
+use("vimwiki/vimwiki")
