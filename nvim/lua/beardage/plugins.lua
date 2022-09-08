@@ -170,4 +170,9 @@ use({
 	end,
 })
 
-use("vimwiki/vimwiki")
+use({
+	"vimwiki/vimwiki",
+	config = function()
+		require("beardage.plugins.vimwiki")
+	end,
+})
