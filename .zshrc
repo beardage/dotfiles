@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:/opt/PhpStorm/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:/opt/PhpStorm/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/dotfiles/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kyle/.oh-my-zsh"
