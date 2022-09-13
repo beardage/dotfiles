@@ -80,6 +80,7 @@ use({
 		"nvim-treesitter/playground",
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		"JoosepAlviste/nvim-ts-context-commentstring",
+		"p00f/nvim-ts-rainbow",
 	},
 	config = function()
 		require("beardage.plugins.treesitter")
