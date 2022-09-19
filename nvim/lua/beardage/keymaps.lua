@@ -17,3 +17,6 @@ keymap("i", "<A-j>", "<Esc>:move .+1<CR>==gi")
 keymap("i", "<A-k>", "<Esc>:move .-2<CR>==gi")
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv")
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv")
+
+--
+keymap("x", "<leader>p", '"_dP')
