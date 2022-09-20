@@ -184,3 +184,5 @@ use({
 		require("nvim-autopairs").setup()
 	end,
 })
+
+use("ThePrimeagen/vim-be-good")
