@@ -143,12 +143,12 @@ use({
 	end,
 })
 
-use({
-	"rmagatti/auto-session",
-	config = function()
-		require("auto-session").setup({})
-	end,
-})
+-- use({
+-- 	"rmagatti/auto-session",
+-- 	config = function()
+-- 		require("auto-session").setup({})
+-- 	end,
+-- })
 
 use("gpanders/editorconfig.nvim")
 
@@ -182,6 +182,17 @@ use({
 	"windwp/nvim-autopairs",
 	config = function()
 		require("nvim-autopairs").setup()
+	end,
+})
+
+use({
+	"mfussenegger/nvim-dap",
+	requires = {
+		"rcarriga/nvim-dap-ui",
+		"theHamsta/nvim-dap-virtual-text",
+	},
+	config = function()
+		require("beardage.plugins.dap")
 	end,
 })
 
