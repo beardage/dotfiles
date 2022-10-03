@@ -185,6 +185,8 @@ use({
 	end,
 })
 
+use("vim-test/vim-test")
+
 use({
 	"mfussenegger/nvim-dap",
 	requires = {
