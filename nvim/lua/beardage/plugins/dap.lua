@@ -1,4 +1,87 @@
 local keymap = require("beardage.lib.utils").keymap
+local dap = require("dap")
+if not dap then
+	return
+end
+
+local mason_dap = require("mason-nvim-dap")
+if not mason_dap then
+	return
+end
+
+mason_dap.setup({
+	ensure_installed = {
+		"chrome",
+		"node2",
+		"firefox",
+	},
+	automatic_installation = true,
+})
+
+-- Adapters: Node and TypeScript
+dap.adapters.node2 = {
+	type = "executable",
+	command = "node",
+	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" },
+}
+
+-- Adapters: Chrome
+dap.adapters.chrome = {
+	type = "executable",
+	command = "node",
+	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js" },
+}
+
+dap.configurations.javascript = {
+	{
+		type = "node2",
+		request = "launch",
+		program = "${file}",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		protocol = "inspector",
+		console = "integratedTerminal",
+	},
+}
+
+dap.configurations.javascript = {
+	{
+		type = "chrome",
+		request = "attach",
+		program = "${file}",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		protocol = "inspector",
+		port = 9222,
+		webRoot = "${workspaceFolder}",
+	},
+}
+
+dap.configurations.javascriptreact = {
+	{
+		type = "chrome",
+		request = "attach",
+		program = "${file}",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		protocol = "inspector",
+		port = 9222,
+		webRoot = "${workspaceFolder}",
+	},
+}
+
+dap.configurations.typescriptreact = {
+	{
+		type = "chrome",
+		request = "attach",
+		program = "${file}",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		protocol = "inspector",
+		port = 9222,
+		webRoot = "${workspaceFolder}",
+	},
+}
 
 keymap("n", "<F5>", "[[<cmd>lua require('dap').continue()<CR>]]")
 keymap("n", "<F3>", "[[<cmd>lua require('dap').step_over()<CR>]]")
@@ -9,66 +92,11 @@ keymap("n", "<leader>B", [[<cmd>lua require('dap').set_breakpoint(vim.fn.input('
 keymap("n", "<leader>lp", [[<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>]])
 keymap("n", "<leader>dr", [[<cmd>lua require('dap').repl.open()<CR>]])
 keymap("n", "<leader>do", [[<cmd>lua require('dapui').open()<CR>]])
+keymap("n", "<leader>dc", [[<cmd>lua require('dapui').close()<CR>]])
 
-require("dapui").setup()
-require("nvim-dap-virtual-text").setup({})
+dap.set_log_level("TRACE")
 
--- open dapui when dap is active
-local dap, dapui = require("dap"), require("dapui")
+local dapui = require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
 end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-	dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-	dapui.close()
-end
-
-dap.adapters.firefox = {
-	type = "executable",
-	command = "node",
-	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js" },
-}
-
-dap.adapters.chrome = {
-	type = "executable",
-	command = "node",
-	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js" },
-}
-
-dap.configurations.javascriptreact = { -- change this to javascript if needed
-	{
-		type = "chrome",
-		request = "attach",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
-		sourceMaps = true,
-		protocol = "inspector",
-		port = 9222,
-		webRoot = "${workspaceFolder}",
-	},
-}
-
-dap.configurations.typescriptreact = { -- change to typescript if needed
-	{
-		name = "Debug with Chrome",
-		type = "chrome",
-		request = "attach",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
-		sourceMaps = true,
-		protocol = "inspector",
-		port = 9222,
-		webRoot = "${workspaceFolder}",
-	},
-	{
-		name = "Debug with Firefox Dev",
-		type = "firefox",
-		request = "launch",
-		reAttach = true,
-		url = "http://localhost:3000",
-		webRoot = "${workspaceFolder}",
-		firefoxExecutable = "/home/kyle/.local/opt/firefox/firefox",
-	},
-}

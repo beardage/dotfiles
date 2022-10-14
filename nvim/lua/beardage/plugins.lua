@@ -185,17 +185,32 @@ use({
 	end,
 })
 
-use("vim-test/vim-test")
-
+-- dap shit
 use({
 	"mfussenegger/nvim-dap",
 	requires = {
-		"rcarriga/nvim-dap-ui",
-		"theHamsta/nvim-dap-virtual-text",
+		"jayp0521/mason-nvim-dap.nvim",
 	},
 	config = function()
 		require("beardage.plugins.dap")
 	end,
 })
+use({
+	"rcarriga/nvim-dap-ui",
+	requires = { "mfussenegger/nvim-dap" },
+	config = function()
+		require("dapui").setup()
+	end,
+})
+use({
+	"theHamsta/nvim-dap-virtual-text",
+	config = function()
+		require("nvim-dap-virtual-text").setup({
+			all_frames = true,
+			commented = true,
+		})
+	end,
+})
 
+-- for practice
 use("ThePrimeagen/vim-be-good")
