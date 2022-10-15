@@ -143,12 +143,23 @@ use({
 	end,
 })
 
--- use({
--- 	"rmagatti/auto-session",
--- 	config = function()
--- 		require("auto-session").setup({})
--- 	end,
--- })
+use({
+	"folke/which-key.nvim",
+	config = function()
+		require("which-key").setup({
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		})
+	end,
+})
+
+use({
+	"rmagatti/auto-session",
+	config = function()
+		require("auto-session").setup({})
+	end,
+})
 
 use("gpanders/editorconfig.nvim")
 

@@ -23,3 +23,6 @@ vim.opt.termguicolors = true
 vim.opt.laststatus = 3 -- single status line (nvim 0.7+ only)
 vim.opt.winbar = "%=%m %f" -- add winbar to top of each split
 vim.opt.cmdheight = 1
+vim.opt.backupdir = "~/.nvim/backup//"
+vim.opt.directory = "~/.nvim/swap//"
+vim.opt.undodir = "~/.nvim/undo//"
