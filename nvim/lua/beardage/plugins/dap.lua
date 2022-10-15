@@ -32,6 +32,13 @@ dap.adapters.chrome = {
 	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js" },
 }
 
+-- Adapters: firefox
+-- dap.adapters.firefox = {
+-- 	type = "executable",
+-- 	command = "node",
+-- 	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js" },
+-- }
+
 dap.configurations.javascript = {
 	{
 		type = "node2",
