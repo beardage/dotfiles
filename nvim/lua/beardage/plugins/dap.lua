@@ -33,11 +33,11 @@ dap.adapters.chrome = {
 }
 
 -- Adapters: firefox
--- dap.adapters.firefox = {
--- 	type = "executable",
--- 	command = "node",
--- 	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js" },
--- }
+dap.adapters.firefox = {
+	type = "executable",
+	command = "node",
+	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js" },
+}
 
 dap.configurations.javascript = {
 	{
@@ -53,40 +53,40 @@ dap.configurations.javascript = {
 
 dap.configurations.javascript = {
 	{
-		type = "chrome",
-		request = "attach",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
+		name = "Debug with Firefox",
+		type = "firefox",
+		request = "launch",
+		reAttach = true,
 		sourceMaps = true,
-		protocol = "inspector",
-		port = 9222,
 		webRoot = "${workspaceFolder}",
+		url = "http://localhost:3000",
+		firefoxExecutable = "/home/kyle/.local/opt/firefox/firefox",
 	},
 }
 
 dap.configurations.javascriptreact = {
 	{
-		type = "chrome",
-		request = "attach",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
+		name = "Debug with Firefox",
+		type = "firefox",
+		request = "launch",
+		reAttach = true,
 		sourceMaps = true,
-		protocol = "inspector",
-		port = 9222,
 		webRoot = "${workspaceFolder}",
+		url = "http://localhost:3000",
+		firefoxExecutable = "/home/kyle/.local/opt/firefox/firefox",
 	},
 }
 
 dap.configurations.typescriptreact = {
 	{
-		type = "chrome",
-		request = "attach",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
+		name = "Debug with Firefox",
+		type = "firefox",
+		request = "launch",
+		reAttach = true,
 		sourceMaps = true,
-		protocol = "inspector",
-		port = 9222,
 		webRoot = "${workspaceFolder}",
+		url = "http://localhost:3000",
+		firefoxExecutable = "/home/kyle/.local/opt/firefox/firefox",
 	},
 }
 
