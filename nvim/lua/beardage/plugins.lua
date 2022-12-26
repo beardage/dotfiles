@@ -80,7 +80,6 @@ use({
 		"nvim-treesitter/playground",
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		"p00f/nvim-ts-rainbow",
 	},
 	config = function()
 		require("beardage.plugins.treesitter")
@@ -95,6 +94,7 @@ use({
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"onsails/lspkind.nvim",
 		"rafamadriz/friendly-snippets",
 		"L3MON4D3/LuaSnip",
@@ -223,5 +223,11 @@ use({
 	end,
 })
 
+use({
+	'ThePrimeagen/harpoon',
+	requires = {'nvim-lua/plenary.nvim'},
+})
+
 -- for practice
 use("ThePrimeagen/vim-be-good")
+
