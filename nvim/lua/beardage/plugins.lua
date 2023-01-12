@@ -80,6 +80,7 @@ use({
 		"nvim-treesitter/playground",
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		"JoosepAlviste/nvim-ts-context-commentstring",
+		"windwp/nvim-ts-autotag",
 	},
 	config = function()
 		require("beardage.plugins.treesitter")
@@ -226,6 +227,10 @@ use({
 use({
 	'ThePrimeagen/harpoon',
 	requires = {'nvim-lua/plenary.nvim'},
+})
+
+use({
+	'Asheq/close-buffers.vim'
 })
 
 -- for practice
