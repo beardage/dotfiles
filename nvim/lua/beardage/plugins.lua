@@ -145,17 +145,6 @@ use({
 })
 
 use({
-	"folke/which-key.nvim",
-	config = function()
-		require("which-key").setup({
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		})
-	end,
-})
-
-use({
 	"rmagatti/auto-session",
 	config = function()
 		require("auto-session").setup({})
@@ -183,12 +172,19 @@ use({
 	end,
 })
 
-use({
-	"vimwiki/vimwiki",
-	config = function()
-		require("beardage.plugins.vimwiki")
-	end,
-})
+use {
+    "nvim-zh/colorful-winsep.nvim",
+    config = function ()
+        require('colorful-winsep').setup()
+    end
+}
+
+-- use({
+-- 	"vimwiki/vimwiki",
+-- 	config = function()
+-- 		require("beardage.plugins.vimwiki")
+-- 	end,
+-- })
 
 use({
 	"windwp/nvim-autopairs",
@@ -198,31 +194,31 @@ use({
 })
 
 -- dap shit
-use({
-	"mfussenegger/nvim-dap",
-	requires = {
-		"jayp0521/mason-nvim-dap.nvim",
-	},
-	config = function()
-		require("beardage.plugins.dap")
-	end,
-})
-use({
-	"rcarriga/nvim-dap-ui",
-	requires = { "mfussenegger/nvim-dap" },
-	config = function()
-		require("dapui").setup()
-	end,
-})
-use({
-	"theHamsta/nvim-dap-virtual-text",
-	config = function()
-		require("nvim-dap-virtual-text").setup({
-			all_frames = true,
-			commented = true,
-		})
-	end,
-})
+-- use({
+-- 	"mfussenegger/nvim-dap",
+-- 	requires = {
+-- 		"jayp0521/mason-nvim-dap.nvim",
+-- 	},
+-- 	config = function()
+-- 		require("beardage.plugins.dap")
+-- 	end,
+-- })
+-- use({
+-- 	"rcarriga/nvim-dap-ui",
+-- 	requires = { "mfussenegger/nvim-dap" },
+-- 	config = function()
+-- 		require("dapui").setup()
+-- 	end,
+-- })
+-- use({
+-- 	"theHamsta/nvim-dap-virtual-text",
+-- 	config = function()
+-- 		require("nvim-dap-virtual-text").setup({
+-- 			all_frames = true,
+-- 			commented = true,
+-- 		})
+-- 	end,
+-- })
 
 use({
 	'ThePrimeagen/harpoon',
@@ -234,5 +230,5 @@ use({
 })
 
 -- for practice
-use("ThePrimeagen/vim-be-good")
+-- use("ThePrimeagen/vim-be-good")
 

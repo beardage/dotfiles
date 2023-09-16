@@ -22,5 +22,5 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.termguicolors = true
 vim.opt.laststatus = 3 -- single status line (nvim 0.7+ only)
 vim.opt.winbar = "%=%m %f" -- add winbar to top of each split
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.opt.swapfile = false

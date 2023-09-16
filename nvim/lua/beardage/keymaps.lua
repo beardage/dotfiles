@@ -3,6 +3,9 @@ local keymap = require("beardage.lib.utils").keymap
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- show line diagnostics_conf
+keymap("n", "<space-e>", ":lua vim.diagnostic.open_float")
+
 -- Reselect visual selection after indenting
 keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
