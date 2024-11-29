@@ -20,9 +20,7 @@ vim.opt.hlsearch = true --  highlight matches
 vim.opt.clipboard = "unnamedplus" -- use system clipboard
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.termguicolors = true
-vim.opt.laststatus = 3     -- single status line (nvim 0.7+ only)
+vim.opt.laststatus = 3 -- single status line (nvim 0.7+ only)
 vim.opt.winbar = "%=%m %f" -- add winbar to top of each split
 vim.opt.cmdheight = 0
 vim.opt.swapfile = false
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-vim.o.shortmess = "ltToOCFW"

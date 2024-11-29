@@ -1,4 +1,4 @@
-local keymap = require("beardage.lib.utils").keymap
+local keymap = require("lib.utils").keymap
 local dap = require("dap")
 if not dap then
 	return

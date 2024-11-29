@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:/opt/PhpStorm/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/dotfiles/bin:$PATH:/opt/homebrew:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:/opt/PhpStorm/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/dotfiles/bin:$PATH:/opt/homebrew:$PATH:/Users/kyle/.local/share/bob/nvim-bin:$PATH:/Library/Android/sdk/tools:$PATH:/Library/Android/sdk/platform-tools:$PATH:/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kyle/.oh-my-zsh"
@@ -120,3 +122,5 @@ export PATH="$PNPM_HOME:$PATH"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+
+PATH=~/.console-ninja/.bin:$PATH

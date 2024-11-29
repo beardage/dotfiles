@@ -9,18 +9,11 @@ require("nvim-tree").setup({
 	update_cwd = false,
 	reload_on_bufenter = false,
 	view = {
-		hide_root_folder = false,
 		side = "right",
 		preserve_window_proportions = false,
 		number = false,
 		relativenumber = false,
 		signcolumn = "yes",
-		mappings = {
-			custom_only = false,
-			list = {
-				-- user mappings go here
-			},
-		},
 	},
 	renderer = {
 		indent_markers = {
@@ -124,3 +117,16 @@ vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeFindFileToggle<CR>", { silen
 vim.api.nvim_set_keymap("n", "<leader>nr", ":NvimTreeRefresh<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tff", ":NvimTreeFindFile<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tf", ":NvimTreeFocus<CR>", { silent = true, noremap = true })
+
+-- fixes issue w/ auto-session plugin
+vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+  pattern = 'NvimTree*',
+  callback = function()
+    local api = require('nvim-tree.api')
+    local view = require('nvim-tree.view')
+
+    if not view.is_visible() then
+      api.tree.open()
+    end
+  end,
+})

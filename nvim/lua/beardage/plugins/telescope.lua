@@ -1,4 +1,4 @@
-local keymap = require('beardage.lib.utils').keymap
+local keymap = require('lib.utils').keymap
 
 require('telescope').setup{
   defaults = {

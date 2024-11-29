@@ -21,13 +21,22 @@ local use = require("packer").use
 
 use("wbthomason/packer.nvim") -- Let packer manage itself
 
-use("tpope/vim-commentary")
-use("tpope/vim-sleuth") -- indent autodetection with editorconfig support
-
+use({
+	"tpope/vim-commentary",
+	cond = [[not vim.g.vscode]],
+})
+-- indent autodetection with editorconfig support
+use({
+	"tpope/vim-sleuth",
+	cond = [[not vim.g.vscode]],
+})
 use({
 	"tpope/vim-fugitive",
 	requires = "tpope/vim-rhubarb",
 	cmd = "G",
+	config = function()
+		require("beardage.plugins.fugitive")
+	end,
 })
 
 use({
@@ -39,13 +48,17 @@ use({
 
 use({
 	"beardage/orlock.nvim",
+	cond = [[not vim.g.vscode]],
 	config = function()
-		vim.cmd("colorscheme orlock")
+		if not vim.g.vscode then
+			vim.cmd("colorscheme orlock")
+		end
 	end,
 })
 
 use({
 	"nvim-lualine/lualine.nvim",
+	cond = [[not vim.g.vscode]],
 	requires = "kyazdani42/nvim-web-devicons",
 	config = function()
 		require("beardage.plugins.lualine")
@@ -54,6 +67,7 @@ use({
 
 use({
 	"kyazdani42/nvim-tree.lua",
+	cond = [[not vim.g.vscode]],
 	requires = "kyazdani42/nvim-web-devicons",
 	config = function()
 		require("beardage.plugins.nvim-tree")
@@ -62,10 +76,11 @@ use({
 
 use({
 	"nvim-telescope/telescope.nvim",
+	cond = [[not vim.g.vscode]],
 	requires = {
 		{ "nvim-lua/plenary.nvim" },
 		{ "kyazdani42/nvim-web-devicons" },
-		{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+		{ "nvim-telescope/telescope-fzf-native.nvim",    run = "make" },
 		{ "nvim-telescope/telescope-live-grep-args.nvim" },
 	},
 	config = function()
@@ -75,6 +90,7 @@ use({
 
 use({
 	"nvim-treesitter/nvim-treesitter",
+	cond = [[not vim.g.vscode]],
 	run = ":TSUpdate",
 	requires = {
 		"nvim-treesitter/playground",
@@ -89,6 +105,7 @@ use({
 
 use({
 	"hrsh7th/nvim-cmp",
+	cond = [[not vim.g.vscode]],
 	requires = {
 		"neovim/nvim-lspconfig",
 		"hrsh7th/cmp-nvim-lsp",
@@ -108,6 +125,7 @@ use({
 
 use({
 	"neovim/nvim-lspconfig",
+	cond = [[not vim.g.vscode]],
 	requires = {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
@@ -146,24 +164,37 @@ use({
 
 use({
 	"rmagatti/auto-session",
+	cond = [[not vim.g.vscode]],
 	config = function()
-		require("auto-session").setup({})
+		require("auto-session").setup({
+			pre_save_cmds = { "NvimTreeClose" },
+			save_extra_cmds = {
+				"NvimTreeOpen",
+			},
+			post_restore_cmds = {
+				"NvimTreeOpen",
+			},
+		})
 	end,
 })
 
 use("gpanders/editorconfig.nvim")
 
 use({
-	"jose-elias-alvarez/null-ls.nvim",
+	"nvimtools/none-ls.nvim",
 	requires = {
 		"nvim-lua/plenary.nvim",
+		"nvimtools/none-ls-extras.nvim",
 	},
 	config = function()
 		require("beardage.plugins.null-ls")
 	end,
 })
 
-use("mg979/vim-visual-multi")
+use({
+	"mg979/vim-visual-multi",
+	cond = [[not vim.g.vscode]],
+})
 
 use({
 	"numToStr/FTerm.nvim",
@@ -172,19 +203,12 @@ use({
 	end,
 })
 
-use {
-    "nvim-zh/colorful-winsep.nvim",
-    config = function ()
-        require('colorful-winsep').setup()
-    end
-}
-
--- use({
--- 	"vimwiki/vimwiki",
--- 	config = function()
--- 		require("beardage.plugins.vimwiki")
--- 	end,
--- })
+use({
+	"nvim-zh/colorful-winsep.nvim",
+	config = function()
+		require("colorful-winsep").setup()
+	end,
+})
 
 use({
 	"windwp/nvim-autopairs",
@@ -193,42 +217,19 @@ use({
 	end,
 })
 
--- dap shit
--- use({
--- 	"mfussenegger/nvim-dap",
--- 	requires = {
--- 		"jayp0521/mason-nvim-dap.nvim",
--- 	},
--- 	config = function()
--- 		require("beardage.plugins.dap")
--- 	end,
--- })
--- use({
--- 	"rcarriga/nvim-dap-ui",
--- 	requires = { "mfussenegger/nvim-dap" },
--- 	config = function()
--- 		require("dapui").setup()
--- 	end,
--- })
--- use({
--- 	"theHamsta/nvim-dap-virtual-text",
--- 	config = function()
--- 		require("nvim-dap-virtual-text").setup({
--- 			all_frames = true,
--- 			commented = true,
--- 		})
--- 	end,
--- })
-
 use({
-	'ThePrimeagen/harpoon',
-	requires = {'nvim-lua/plenary.nvim'},
+	"ThePrimeagen/harpoon",
+	cond = [[not vim.g.vscode]],
+	requires = { "nvim-lua/plenary.nvim" },
 })
 
 use({
-	'Asheq/close-buffers.vim'
+	"Asheq/close-buffers.vim",
+})
+
+use({
+	"github/copilot.vim",
 })
 
 -- for practice
 -- use("ThePrimeagen/vim-be-good")
-
