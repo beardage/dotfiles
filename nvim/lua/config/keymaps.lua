@@ -51,6 +51,3 @@ map(
   "<cmd>CodeCompanionChat Add<cr>",
   { noremap = true, silent = true, desc = "CodeCompanion Chat Add" }
 )
-
--- Expand 'cc' into 'CodeCompanion' in the command line
-vim.cmd([[cab cc CodeCompanion]])
