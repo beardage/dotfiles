@@ -16,6 +16,8 @@ map("i", "<A-K>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 map("v", "<A-J>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
 map("v", "<A-K>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
+map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+
 map("n", "<A-i>", function()
   Snacks.terminal(nil, { cwd = LazyVim.root() })
 end, { desc = "Terminal (Root Dir)" })

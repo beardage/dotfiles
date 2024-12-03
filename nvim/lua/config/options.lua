@@ -6,3 +6,4 @@ local opt = vim.opt
 
 opt.winbar = "%=%m %f" -- add winbar to top of each split
 opt.tabstop = 4
+vim.g.root_spec = { "cwd" }
