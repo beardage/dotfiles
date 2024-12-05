@@ -7,7 +7,7 @@ return {
       LazyVim.pick("files", { hidden = true, no_ignore = true }),
       desc = "Find Files (Root Dir) (including hidden)",
     },
-    { "<leader>fg", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+    { "<leader>fg", LazyVim.pick("live_grep", { hidden = false, no_ignore = false }), desc = "Grep (Root Dir)" },
     {
       "<leader>fG",
       LazyVim.pick("live_grep", { hidden = true, no_ignore = true }),

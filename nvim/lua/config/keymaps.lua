@@ -23,6 +23,8 @@ map("n", "<A-i>", function()
 end, { desc = "Terminal (Root Dir)" })
 map("t", "<A-i>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 
+map("n", "<leader>gf", "<cmd>G<cr>", { desc = "Git Fugitive" })
+
 map(
   "n",
   "<leader>aa",
