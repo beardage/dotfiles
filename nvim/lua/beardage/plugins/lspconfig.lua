@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "sumneko_lua", "tsserver", "tailwindcss", "cssls", "html", "svelte", "jsonls" },
+	ensure_installed = { "lua_ls", "ts_ls", "tailwindcss", "cssls", "html", "svelte", "jsonls" },
 })
 
 local lspconfig = require("lspconfig")
@@ -57,7 +57,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- npm install -g typescript typescript-language-server
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
@@ -92,7 +92,7 @@ lspconfig.jsonls.setup({
 	on_attach = on_attach,
 })
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	settings = {
 		Lua = {

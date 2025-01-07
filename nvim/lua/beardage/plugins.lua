@@ -190,39 +190,39 @@ use({
 	end,
 })
 
-use({
-	"windwp/nvim-autopairs",
-	config = function()
-		require("nvim-autopairs").setup()
-	end,
-})
+-- use({
+-- 	"windwp/nvim-autopairs",
+-- 	config = function()
+-- 		require("nvim-autopairs").setup()
+-- 	end,
+-- })
 
 -- dap shit
-use({
-	"mfussenegger/nvim-dap",
-	requires = {
-		"jayp0521/mason-nvim-dap.nvim",
-	},
-	config = function()
-		require("beardage.plugins.dap")
-	end,
-})
-use({
-	"rcarriga/nvim-dap-ui",
-	requires = { "mfussenegger/nvim-dap" },
-	config = function()
-		require("dapui").setup()
-	end,
-})
-use({
-	"theHamsta/nvim-dap-virtual-text",
-	config = function()
-		require("nvim-dap-virtual-text").setup({
-			all_frames = true,
-			commented = true,
-		})
-	end,
-})
+-- use({
+-- 	"mfussenegger/nvim-dap",
+-- 	requires = {
+-- 		"jayp0521/mason-nvim-dap.nvim",
+-- 	},
+-- 	config = function()
+-- 		require("beardage.plugins.dap")
+-- 	end,
+-- })
+-- use({
+-- 	"rcarriga/nvim-dap-ui",
+-- 	requires = { "mfussenegger/nvim-dap" },
+-- 	config = function()
+-- 		require("dapui").setup()
+-- 	end,
+-- })
+-- use({
+-- 	"theHamsta/nvim-dap-virtual-text",
+-- 	config = function()
+-- 		require("nvim-dap-virtual-text").setup({
+-- 			all_frames = true,
+-- 			commented = true,
+-- 		})
+-- 	end,
+-- })
 
 use({
 	'ThePrimeagen/harpoon',
@@ -231,6 +231,10 @@ use({
 
 use({
 	'Asheq/close-buffers.vim'
+})
+
+use({
+	'github/copilot.vim'
 })
 
 -- for practice
