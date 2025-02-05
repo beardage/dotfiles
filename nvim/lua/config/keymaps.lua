@@ -55,3 +55,10 @@ map(
   "<cmd>CodeCompanionChat Add<cr>",
   { noremap = true, silent = true, desc = "CodeCompanion Chat Add" }
 )
+
+map(
+  "n",
+  "<leader>bd",
+  "<cmd>lua require('close_buffers').delete({type= 'hidden', force = true})<cr>",
+  { desc = "Close Hidden Buffers" }
+)

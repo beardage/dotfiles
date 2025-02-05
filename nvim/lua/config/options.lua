@@ -2,8 +2,11 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-local opt = vim.opt
+local o = vim.opt
+local g = vim.g
 
-opt.winbar = "%=%m %f" -- add winbar to top of each split
-opt.tabstop = 4
-vim.g.lazyvim_eslint_auto_format = true
+o.winbar = "%=%m %f" -- add winbar to top of each split
+o.tabstop = 4
+o.wrap = true
+g.lazyvim_eslint_auto_format = true
+g.root_spec = { "cwd" }
