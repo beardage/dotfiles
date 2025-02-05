@@ -27,37 +27,6 @@ map("n", "<leader>gf", "<cmd>G<cr>", { desc = "Git Fugitive" })
 
 map(
   "n",
-  "<leader>aa",
-  "<cmd>CodeCompanionActions<cr>",
-  { noremap = true, silent = true, desc = "CodeCompanion Actions" }
-)
-map(
-  "v",
-  "<leader>aa",
-  "<cmd>CodeCompanionActions<cr>",
-  { noremap = true, silent = true, desc = "CodeCompanion Actions" }
-)
-map(
-  "n",
-  "<leader>ac",
-  "<cmd>CodeCompanionChat Toggle<cr>",
-  { noremap = true, silent = true, desc = "CodeCompanion Chat Toggle" }
-)
-map(
-  "v",
-  "<leader>ac",
-  "<cmd>CodeCompanionChat Toggle<cr>",
-  { noremap = true, silent = true, desc = "CodeCompanion Chat Toggle" }
-)
-map(
-  "v",
-  "<leader>ap",
-  "<cmd>CodeCompanionChat Add<cr>",
-  { noremap = true, silent = true, desc = "CodeCompanion Chat Add" }
-)
-
-map(
-  "n",
   "<leader>bd",
   "<cmd>lua require('close_buffers').delete({type= 'hidden', force = true})<cr>",
   { desc = "Close Hidden Buffers" }
