@@ -10,3 +10,5 @@ o.tabstop = 4
 o.wrap = true
 g.lazyvim_eslint_auto_format = true
 g.root_spec = { "cwd" }
+g.lazyvim_picker = "telescope"
+o.foldmethod = "syntax"

@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:~/.npm-global/bin:/opt/PhpStorm/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/dotfiles/bin:$PATH:/opt/homebrew:$PATH:/Users/kyle/.local/share/bob/nvim-bin:$PATH:/Library/Android/sdk/tools:$PATH:/Library/Android/sdk/platform-tools:$PATH:/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH:/.console-ninja/.bin:$PATH
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:~/.npm-global/bin:/opt/PhpStorm/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/dotfiles/bin:/opt/homebrew:/Users/kyle/.local/share/bob/nvim-bin:/Library/Android/sdk/tools:/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/3.11/bin:/.console-ninja/.bin:/usr/local/go/bin:$HOME/.console-ninja/.bin:$HOME/.local/share/pnpm
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kyle/.oh-my-zsh"
@@ -80,6 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 unsetopt auto_cd
 
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -113,11 +115,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export NODE_OPTIONS=--openssl-legacy-provider
+export NODE_OPTIONS="$NODE_OPTIONS --openssl-legacy-provider"
 
 # pnpm
-export PNPM_HOME="/home/kyle/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+export PNPM_HOME="/Users/kyle/.local/share/pnpm"
 # pnpm end
 
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -129,4 +130,10 @@ if [ -f '/Users/kyle/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kyle/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kyle/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kyle/google-cloud-sdk/completion.zsh.inc'; fi
 
+source "${HOME}/dotfiles/.secrets.sh"
+
+
 PATH=~/.console-ninja/.bin:$PATH
+
+# opencode
+export PATH=/Users/kyle/.opencode/bin:$PATH

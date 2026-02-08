@@ -1,21 +1,28 @@
-local get_root_dir = function(fname)
-  local util = require("lspconfig.util")
-  return util.root_pattern(".git")(fname) or util.root_pattern("package.json", "tsconfig.json")(fname)
-end
-
 return {
-  "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      eslint = {
-        root_dir = get_root_dir,
-        settings = {
-          workingDirecories = { mode = "auto" },
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        eslint = {
+          settings = {
+            -- auto-detect working directories per-package (critical for firebase monorepo)
+            workingDirectories = { mode = "auto" },
+          },
         },
-      },
-      vtsls = {
-        settings = {
-          autoUseWorkspaceTsdk = true,
+        vtsls = {
+          settings = {
+            typescript = {
+              tsdk = nil, -- use workspace tsdk when available
+            },
+          },
         },
       },
     },

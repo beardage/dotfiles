@@ -5,6 +5,7 @@
 - link:
     ~/.config/kitty: kitty
     ~/.config/nvim: nvim
+    ~/.config/ghostty: ghostty
     ~/.dircolors: .dircolors
     ~/.config/rofi/config:
         create: true

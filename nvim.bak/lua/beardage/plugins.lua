@@ -52,6 +52,12 @@ use({
 	config = function()
 		if not vim.g.vscode then
 			vim.cmd("colorscheme orlock")
+			vim.cmd([[
+              highlight Normal guibg=none
+              highlight NonText guibg=none
+              highlight Normal ctermbg=none
+              highlight NonText ctermbg=none
+            ]])
 		end
 	end,
 })
@@ -80,7 +86,7 @@ use({
 	requires = {
 		{ "nvim-lua/plenary.nvim" },
 		{ "kyazdani42/nvim-web-devicons" },
-		{ "nvim-telescope/telescope-fzf-native.nvim",    run = "make" },
+		{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 		{ "nvim-telescope/telescope-live-grep-args.nvim" },
 	},
 	config = function()
